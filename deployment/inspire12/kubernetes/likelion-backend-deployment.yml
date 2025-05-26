@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: likelion-backend
+  name: likelion-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: likelion-backend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: likelion-backend
+    spec:
+      containers:
+      - image: likelion-backend
+        imagePullPolicy: Never
+        name: likelion-backend
+        resources: {}
+status: {}
